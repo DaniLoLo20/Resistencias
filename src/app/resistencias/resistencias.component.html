@@ -1,0 +1,137 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                </li>
+               
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+                <input class="form-control me-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+  </div>
+</nav>
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="mb-3">
+              <label for="" class="form-label">Color1</label>
+              <select class="form-select form-select-lg" name="" id="" [(ngModel)]="color_1" >
+                <option selected>Selecciona Uno</option>
+            <option value="Negro" id="Negro"> Negro</option>
+            <option value="Cafe" id="Cafe" >Cafe</option>
+            <option value="Rojo" id="Rojo"> Rojo</option>
+            <option value="Naranja" id="Naranja"> Naranja</option>
+            <option value="Amarillo" id="Amarillo"> Amarillo</option>
+            <option value="Verde" id="Verde"> Verde</option>
+            <option value="Azul" id="Azul"> Azul</option>
+            <option value="Violeta" id="Violeta"> Violeta</option>
+            <option value="Gris" id="Gris"> Gris</option>
+            <option value="Blanco" id="Blanco"> Blanco</option>
+              </select>
+            </div>
+              <!--Salto a input-->
+              <br>
+              <h3>
+                Tolerancia
+              </h3>
+              <br>
+              <div class="input-group mb-2">
+                <div class="input-group-text">
+                  <input type="radio" name="resistencia" value="0" id="Oro" [(ngModel)]="tolerancia">
+                </div>
+                <label for="" class="form-control" name="colorsin">Oro</label>
+                
+              </div>
+              <br>
+              <div class="input-group mb-2">
+                <div class="input-group-text">
+                  <input type="radio" name="resistencia" value="1" id="Plata" [(ngModel)]="tolerancia">
+                </div>
+                <label for="" class="form-control" name="colorsin" >Plata</label>
+              </div>
+
+              <br>
+              <br>
+              <button type="button" class="btn btn-outline-success" (click)="porcesar()" >Agregar</button>
+
+
+        </div>
+        <div class="col-lg-3">
+          <label for="" class="form-label" >Color 2</label>
+          <select class="form-select form-select-lg" name="" id=""   [(ngModel)]="color_2" >
+            <option selected>Selecciona Uno</option>
+            <option value="Negro" id="Negro"> Negro</option>
+            <option value="Cafe" id="Cafe" >Cafe</option>
+            <option value="Rojo" id="Rojo"> Rojo</option>
+            <option value="Naranja" id="Naranja"> Naranja</option>
+            <option value="Amarillo" id="Amarillo"> Amarillo</option>
+            <option value="Verde" id="Verde"> Verde</option>
+            <option value="Azul" id="Azul"> Azul</option>
+            <option value="Violeta" id="Violeta"> Violeta</option>
+            <option value="Gris" id="Gris"> Gris</option>
+            <option value="Blanco" id="Blanco"> Blanco</option>
+          </select>
+        </div>
+        <div class="col-lg-3">
+          <label for="" class="form-label">Color 3</label>
+          <select class="form-select form-select-lg" name="" id=""  [(ngModel)]="color_3" >
+            <option selected>Selecciona Uno</option>
+            <option value="Negro" id="Negro"> Negro</option>
+            <option value="Cafe" id="Cafe" >Cafe</option>
+            <option value="Rojo" id="Rojo"> Rojo</option>
+            <option value="Naranja" id="Naranja"> Naranja</option>
+            <option value="Amarillo" id="Amarillo"> Amarillo</option>
+            <option value="Verde" id="Verde"> Verde</option>
+            <option value="Azul" id="Azul"> Azul</option>
+            <option value="Violeta" id="Violeta"> Violeta</option>
+            <option value="Gris" id="Gris"> Gris</option>
+            <option value="Blanco" id="Blanco"> Blanco</option>
+          </select>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<div class="container mt-3">
+     
+  <table class="table table table-striped" >
+    <thead>
+      <tr>
+        <th scope="col">Color 1</th>
+        <th scope="col">Color 2</th>
+        <th scope="col">Color 3</th>
+        <th scope="col">Tolerancia</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Valor Min</th>
+        <th scope="col">Valor Max</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr class="">
+        <td scope="row"  [style.color]=" {Style_1} " id="colorsin1">{{color_1}}</td>
+        <td  id="colorsin2">{{color_2}}</td>
+        <td  id="colorsin3" >{{color_3}}</td>
+        <td> {{tolerancia}} </td>
+        <td> {{resistencia}} </td>
+        <td> {{min}} </td>
+        <td> {{max}} </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
